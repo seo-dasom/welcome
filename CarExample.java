@@ -2,25 +2,30 @@ package sec07.exam01_enum;
 
 public class CarExample {
 	public static void main(String[] args) {
-		Car car1 = new Car();
-		System.out.println("car1.company : " + car1.company);
-		System.out.println();
+		Car car = new Car();
 		
-		Car car2 = new Car("자가용");
-		System.out.println("car2.company : " + car2.company);
-		System.out.println("car2.model : " + car2.model);
-		System.out.println();
-		
-		Car car3 = new Car("자가용", "빨강");
-		System.out.println("car3.company : " + car3.company);
-		System.out.println("car3.model : " + car3.model);
-		System.out.println("car3.color : " + car3.color);
-		System.out.println();
-		
-		Car car4 = new Car("택시", "검정", 200);
-		System.out.println("car4.company : " + car4.company);
-		System.out.println("car4.model : " + car4.model);
-		System.out.println("car4.color : " + car4.color);
-		System.out.println("car4.maxSpeed : " + car4.maxSpeed);
+		for(int i=1; i<=5; i++) {
+			int problemLocation = car.run();
+			
+			switch(problemLocation) {
+			case 1:
+				System.out.println("앞왼쪽 HankookTire로 교체");
+				car.frontLeftTire = new KumhoTire("앞왼쪽", 15);
+				break;
+			case 2:
+				System.out.println("앞오른쪽 KumhoTire로 교체");
+				car.frontRightTire = new KumhoTire("앞오른쪽", 13);
+				break;
+			case 3:
+				System.out.println("뒤왼쪽 HankookTire로 교체");
+				car.backLeftTire = new HankookTire("뒤왼쪽", 14);
+				break;
+			case 4:
+				System.out.println("뒤오른쪽 KumhoTire로 교체");
+				car.backRightTire = new KumhoTire("뒤오른쪽", 17);
+				break;
+			}
+			System.out.println("-----------------------");
+		}
 	}
 }

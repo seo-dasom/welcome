@@ -2,27 +2,22 @@ package sec07.exam01_enum;
 
 public class Car {
 	//필드
-	String company = "현대자동차";
-	String model;
-	String color;
-	int maxSpeed;
-	
+	Tire frontLeftTire = new Tire("앞왼쪽", 6);
+	Tire frontRightTire = new Tire("앞오른쪽", 2);
+	Tire backLeftTire = new Tire("뒤왼쪽", 3);
+	Tire backRightTire = new Tire("뒤오른쪽", 4);
 	//생성자
-	Car() {
-	}
+	//메소드
+	int run() {
+		System.out.println("[자동차가 달립니다.]");
+		if(frontLeftTire.roll()==false) { stop(); return 1; }
+		if(frontRightTire.roll()==false) { stop(); return 2; }
+		if(backLeftTire.roll()==false) { stop(); return 3; }
+		if(backRightTire.roll()==false) { stop(); return 4; }
+		return 0;
+		}
 	
-	Car(String model) {
-		this.model = model;
-	}
-	
-	Car(String model, String color) {
-		this.model = model;
-		this.color = color;
-	}
-	
-	Car(String model, String color, int maxSpeed) {
-		this.model = model;
-		this.color = color;
-		this.maxSpeed = maxSpeed;
+	void stop() {
+		System.out.println("[자동차가 멈춥니다.]");
 	}
 }
