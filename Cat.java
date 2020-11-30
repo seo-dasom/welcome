@@ -2,11 +2,11 @@ package sec07.exam01_enum;
 
 public class Cat extends Animal {
 	public Cat() {
-		this.kind = "Æ÷À¯·ù";
+		this.kind = "í¬ìœ ë¥˜";
 	}
 	
 	@Override
 	public void sound() {
-		System.out.println("¾ß¿Ë");
+		System.out.println("ì•¼ì˜¹");
 	}
 }

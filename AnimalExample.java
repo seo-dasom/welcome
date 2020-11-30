@@ -7,7 +7,7 @@ public class AnimalExample {
 		dog.sound();
 		cat.sound();
 		System.out.println("----");
-		//º¯¼öÀÇ ÀÚµ¿ Å¸ÀÔ º¯È¯
+		//ë³€ìˆ˜ì˜ ìë™ íƒ€ì… ë³€í™˜
 		Animal animal = null;
 		animal = new Dog();
 		animal.sound();
@@ -15,7 +15,7 @@ public class AnimalExample {
 		animal.sound();
 		System.out.println("----");
 		
-		//¸Ş¼ÒµåÀÇ ´ÙÇü¼º
+		//ë©”ì†Œë“œì˜ ë‹¤í˜•ì„±
 		animalSound(new Dog());
 		animalSound(new Cat());
 	}
