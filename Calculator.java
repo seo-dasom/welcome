@@ -1,23 +1,18 @@
 package sec07.exam01_enum;
 
 public class Calculator {
+	private int memory;
 	
-	//메소드
-	void powerOn() {
-		System.out.println("전원을 켭니다.");
+	public int getMemory() {
+		return memory;
 	}
 	
-	int plus(int x, int y) {
-		int result = x + y;
-		return result;
-	}
-	
-	double divide(int x, int y) {
-		double result = (double)x / (double)y;
-		return result;
-	}
-	
-	void powerOff() {
-		System.out.println("전원을 끕니다.");
+	public void setMemory(int memory) {
+		this.memory = memory;
+		try {
+			Thread.sleep(2000);
+		} catch(InterruptedException e) {
+			System.out.println(Thread.currentThread().getName() + ": " + this.memory);
+		}
 	}
 }
