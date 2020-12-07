@@ -14,7 +14,7 @@ public class ThreadGroupExample {
 		mainGroup.list();
 		System.out.println();
 		
-		try { Thread.sleep(3000); } catch (InterruptedException e) { }
+		try { Thread.sleep(3000); } catch (InterruptedException e)  { }
 		
 		System.out.println("[ myGroup 스레드 그룹의 interrupt() 메소드 호출 ]");
 		myGroup.interrupt();

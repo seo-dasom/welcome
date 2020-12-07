@@ -14,7 +14,7 @@ public class DateBox {
 		data = null;
 		notify();
 		return returnValue;
-		
+	}
 		public synchronized void setData(String data) {
 			if(this.data != null) {
 				try {
