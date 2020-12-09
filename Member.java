@@ -1,20 +1,21 @@
 package sec07.exam01_enum;
 
 public class Member {
-	public String id;
+	private String name;
+	private String id;
 	
+	public Member() {
+		System.out.println("Member() 실행");
+	}
 	public Member(String id) {
+		System.out.println("Member(String id) 실행");
+		this.id = id;
+	}
+	public Member(String name, String id) {
+		System.out.println("Member(String name, String id)");
+		this.name = name;
 		this.id = id;
 	}
 	
-	@Override
-	public boolean equals(Object obj) {
-		if(obj instanceof Member) {
-			Member member = (Member) obj;
-			if(id.equals(member.id)) {
-				return true;
-			}
-		}
-		return false;
-	}
+	public String getId() { return id; }
 }
